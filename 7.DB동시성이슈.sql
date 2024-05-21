@@ -22,7 +22,7 @@ select post_count from author where id = 4 lock in share mode;
 do sleep(15);
 select post_count from author where id = 4 lock in share mode;
 commit;
-
+-- 아래는 터미널
 select  post_count from author where id = 4 lock in share mode;
 update author set post_count = 0 where id =4;
 
@@ -33,6 +33,7 @@ select post_count from author where id = 4 for update;
 do sleep(15);
 select post_count from author where id = 4 for update;
 commit;
-
+-- 아래는 터미널
 select  post_count from author where id = 4 for update;
 update author set post_count = 0 where id =4;
+
